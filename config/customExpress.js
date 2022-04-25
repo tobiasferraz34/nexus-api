@@ -7,7 +7,7 @@ module.exports = () => {
   const app = express();
 
   //http://localhost:3000
-  app.use(cors({ origin: 'https://trite-stick.surge.sh', credentials: true }));
+  app.use(cors({ origin: 'http://trite-stick.surge.sh', credentials: true }));
   app.use(express.urlencoded({ limit: '50mb', extended: false, parameterLimit: 50000 }));
   app.use(express.json({ extended: false, limit: '50mb' }));
   consign().include('controllers').into(app);
